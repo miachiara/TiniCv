@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    background-color: #e3e0e0;
+}
+
+main{
+    background-image: url("img/fondo.png");
+    background-size: 100%;
+    background-repeat: round;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 100px 50px 50px 50px;
+    flex-wrap: wrap;
+    gap: 50px;
+    position: relative;
+    max-width: 900px;
+}
+
+.imgPerfil, .imgPerfil2{
+    border-radius: 50%;
+    width: 300px;
+    border: 10px solid #D8617D;
+}
+
+.imgPerfil2{
+    display: none;
+}
+.colorPanel{
+    background-color: #FF9DCF;
+    color: #545454;
+    border-radius: 30px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    flex-wrap: wrap;
+}
+
+.leftPanel .title{
+    background-color: white;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 20px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.leftPanel p{
+    margin-bottom: 10px;
+}
+
+.progress{
+    background-color: #D8617D;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.leftPanel i{
+    color: #D8617D;
+    margin-right: 10px;
+}
+
+.name{
+    font-family: 'Titan One', cursive;
+    color: #FF9DCF;
+    font-size: 4rem;
+    -webkit-text-stroke: 1px #FF66C4;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.rightPanel{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rightPanel .title{
+    background-color: #FF9DCF;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.acercaDeMi .title, .experiencia .title{
+    background-color: #FF9DCF;
+    color: #545454;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-top: 50px;
+}
+
+.acercaDeMi p{
+    font-weight: bold;
+    color: #545454;
+    line-height: 25px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.experiencia{
+    text-transform: uppercase;
+}
+
+.firstList{
+    list-style: none;
+    padding: 0px;
+    margin-top: 10px;
+}
+
+.secondList{
+    list-style: disc;
+}
+
+.firstList p{
+    color: black;
+    font-weight: bold;
+}
+
+.secondList li{
+    color: #545454;
+    font-weight: bold;
+}
+
+.next{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    animation-name: stretch;
+    animation-duration: 2.0s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+.back{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 2rem;
+    color: #FF66C4;
+    cursor: pointer;
+    animation-name: stretch;
+    animation-duration: 2.0s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes stretch {
+    0% {
+        transform: scale(1);
+        border-radius: 100%;
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+.titlePremio{
+    background-color: #FF9DCF;
+    color: #545454;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-top: 50px;
+}
+
+.listPremios span{
+    font-weight: bold;
+}
+
+@media (max-width: 870px){
+    main{
+        padding: 50px 0px;
+        background-size: cover;
+    }
+
+    .rightPanel{
+        width: 80vw;
+    }
+
+    .imgPerfil{
+        display: none;
+    }
+
+    .imgPerfil2{
+        display: block;
+        margin-top: 20px;
+    }
+
+    .leftPanel{
+        order: 1;
+    }
+}
